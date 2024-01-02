@@ -62,7 +62,7 @@ const Form = () => {
 }
 
     // Clear input fields after submission
-    setSrNo('');
+    setSrNo(srNo + 1);
     setItem('');
     setQuantity('');
     setRate('');
