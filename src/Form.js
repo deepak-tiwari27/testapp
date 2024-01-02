@@ -58,7 +58,7 @@ const Form = () => {
     };
 
     setFormData([...formData, newRow]);
-        setSrNo(srNo + 1)
+    setSrNo(srNo + 1);
 }
 
     // Clear input fields after submission
