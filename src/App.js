@@ -14,11 +14,11 @@ function App() {
       <form className = "customer-info">
   <label>
     Name:
-    <input type="text" name="name" onChange={(e)=>setText(e.target.value)} />
+    <input type="text" name="name" onChange={(e)=>setText(e.target.value)} autocomplete="off"/>
   </label>
   <label>
     Phone:
-    <input type="text" name = "phone" onChange={(e)=>setNumber(e.target.value)}/>
+    <input type="text" name = "phone" onChange={(e)=>setNumber(e.target.value)} autocomplete="off"/>
   </label>
   </form>
 
