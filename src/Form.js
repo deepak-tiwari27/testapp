@@ -3,7 +3,7 @@ import "./App.css"
 
 const Form = () => {
   const [formData, setFormData] = useState([]);
-  const [srNo, setSrNo] = useState('');
+  const [srNo, setSrNo] = useState(1);
   const [item, setItem] = useState('');
   const [quantity, setQuantity] = useState('');
   const [rate, setRate] = useState('');
@@ -58,6 +58,7 @@ const Form = () => {
     };
 
     setFormData([...formData, newRow]);
+        setSrNo(srNo + 1)
 }
 
     // Clear input fields after submission
@@ -80,7 +81,7 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Serial No.: 
-             <input type="text" value={srNo} onChange={(e) => setSrNo(e.target.value)} />
+             <input type="text" value={srNo} readOnly />
         </label>
         <br />
 
@@ -92,13 +93,13 @@ const Form = () => {
 
         <label>
           Quantity:
-          <input type="text" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
+          <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
         </label>
         <br />
 
         <label>
           Rate:
-          <input type="text" value={rate} onChange={(e) => setRate(e.target.value)} />
+          <input type="number" value={rate} onChange={(e) => setRate(e.target.value)} />
         </label>
         <br />
 
